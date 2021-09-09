@@ -29,19 +29,21 @@ export const PostForm = (props) => {
 
 
     return (
-            <form >
-                {/*Управляемый инпут*/}
-                <MyInput placeholder = "Название поста" value={post.title} onChange={onChangeTitleHandler}/>
+        <form>
+            {/*Управляемый инпут*/}
+            <MyInput placeholder="Название поста" value={post.title} onChange={onChangeTitleHandler}/>
 
-                {/*не управляемый инпут получаем доступ напрямую к DOM*/}
-                {/*<input ref={bodyInputRef}  type="text"/>*/}
+            {/*не управляемый инпут получаем доступ напрямую к DOM*/}
+            {/*<input ref={bodyInputRef}  type="text"/>*/}
 
-                {/*не управляемый или не конролируемый инпут получаем доступ напрямую к DOM*/}
-                {/*<MyInput placeholder="Описание поста" ref={bodyInputRef}/>*/}
-                <MyInput placeholder = "Описание поста" value={post.body} onChange={onChangeBodyHandler}/>
-                <MyButton onClick={addNewPost} >Создать пост</MyButton>
+            {/*не управляемый или не конролируемый инпут получаем доступ напрямую к DOM*/}
+            {/*<MyInput placeholder="Описание поста" ref={bodyInputRef}/>*/}
+            <MyInput placeholder="Описание поста" value={post.body} onChange={onChangeBodyHandler}/>
+            <MyButton onClick={addNewPost} style={{display: "flex", justifyContent: "flex-start"}}>
+                Создать пост
+            </MyButton>
 
-            </form>
+        </form>
 
     );
 };
